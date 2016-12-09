@@ -1,0 +1,19 @@
+<html ng-app="Assignment">
+	<head>
+		<script src="lib/angular.js"></script>
+		<script src="app.module.js"></script>
+		<script src="app.constant.js"></script>
+		<script src="fileupload/app.fileupload.module.js"></script>
+		<script src="fileupload/fileupload.directive.js"></script>
+		<script src="fileupload/fileupload.service.js"></script>
+		<script src="fileupload/fileupload.controller.js"></script>
+	</head>
+	<body>
+			<div ng-controller="fileUploadController">
+					<form name="fileUploadForm">
+						<input type = "file" upload = "myFile"/>
+						<span>{{ status }}</span>
+					</form>
+			</div>			
+	</body>
+</html>
