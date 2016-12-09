@@ -1,0 +1,1 @@
+import {obj} from "a"

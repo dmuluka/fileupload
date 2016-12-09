@@ -15,6 +15,7 @@ app.post('/upload', function(req, res) {
 
 	var url = "http://"+server.host+":"+server.port+"/upload";
 	var file = req.files.file;
+
 	var formData = {
   	file: new Buffer(file.data),
   	name: file.name

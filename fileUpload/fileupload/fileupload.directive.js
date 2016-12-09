@@ -8,14 +8,17 @@ function upload($parse, fileUploadService) {
      restrict: 'A',
      link: function(scope, element, attrs) {		 
          element.bind('change', function(){
-            fileUploadService
-            .uploadFile(element[0].files[0])
-            .success(function(res){ 
-            	scope.status = res; 
-            })
-            .error(function(error){
-	            scope.status = error;
-            });
+         		var file = element[0].files[0];
+						if(!!file){
+		          fileUploadService
+		          .uploadFile(file)
+		          .success(function(res){ 
+		          	scope.status = res; 
+		          })
+		          .error(function(error){
+			          scope.status = error;
+		          });
+            }
          });
       }
    };
